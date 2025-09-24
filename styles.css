@@ -1,0 +1,56 @@
+/* Reset mínimo */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+
+:root {
+--c-primario: #84482D; /* h1 */
+--c-borde: #BE6841; /* galería */
+--c-texto: #1C1D1F; /* párrafos */
+}
+
+
+body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+.wrap { max-width: 900px; margin: 0 auto; padding: 24px; }
+
+
+/* Estilo del encabezado */
+h1 {
+color: var(--c-primario);
+text-align: center;
+margin-bottom: 16px;
+}
+
+
+/* Estilo de los párrafos */
+p {
+font-size: 18px; /* tamaño */
+line-height: 1.5em; /* interlineado */
+color: var(--c-texto); /* color del texto */
+margin-bottom: 12px;
+}
+
+
+/* Contenedor de imágenes */
+.galeria {
+display: flex; /* flex */
+justify-content: space-around; /* space-around */
+border: 2px solid var(--c-borde); /* borde */
+padding: 20px; /* padding */
+border-radius: 8px;
+gap: 12px; /* opcional con space-around */
+margin-top: 16px;
+}
+
+
+/* Imágenes */
+.galeria img {
+width: 250px; /* ancho */
+margin: 50px; /* margen */
+display: block;
+}
+
+
+/* Bonus: versión responsive suave */
+@media (max-width: 560px) {
+.galeria { justify-content: center; flex-wrap: wrap; }
+}
